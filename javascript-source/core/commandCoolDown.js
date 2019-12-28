@@ -306,10 +306,11 @@
                 if (isNaN(parseInt(subAction))) {
                     $.say($.whisperPrefix(sender) + $.lang.get('cooldown.default.usage'));
                     return;
-                } else if (parseInt(subAction) < 5) {
-                    $.say($.whisperPrefix(sender) + $.lang.get('cooldown.coolcom.err'));
-                    return;
                 }
+//                else if (parseInt(subAction) < 5) {
+//                    $.say($.whisperPrefix(sender) + $.lang.get('cooldown.coolcom.err'));
+//                    return;
+//                }
 
                 defaultCooldownTime = parseInt(subAction);
                 $.setIniDbNumber('cooldownSettings', 'defaultCooldownTime', defaultCooldownTime);
